@@ -1,0 +1,16 @@
+{
+    "name": "typer",
+    "version": "1.0.0",
+    "description": "typer",
+    "manifest_version": 3,
+    "author": "Carl",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Hax"
+    },
+    "permissions": [
+      "tabs",
+      "scripting"
+    ],
+    "host_permissions": ["*://*/"]
+}
