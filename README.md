@@ -1,6 +1,11 @@
 # Auto typer for monkeytype website
 
-Automatically completes the lowercase words typing test on monkeytype.com. The default speed is set to 100 wpm. Requires linux and the chrome browser.
+Automatically completes the lowercase words typing test on monkeytype.com. The default speed is set to 150 wpm. Requires linux and the chrome browser.
+
+## Limitations
+
+- Doesn't work with punctuation or uppercase letters.
+- The word list is extracted only once, so if the speed is set too fast or if the timer is set for too long, it might stop typing before the time is up. Try with the 15 second test, or with a set number of words (upto 100).
 
 ## Setup
 
@@ -32,9 +37,3 @@ Automatically completes the lowercase words typing test on monkeytype.com. The d
 - You need to refresh the page between tests.
 - The keypresses can't be simulated within the browser itself, since the dispatchEvent method creates events with isTrusted set to false, which doesn't work.
 - Change the speed variable in the server/__init\_\_.py file to adjust the speed.
-
-## Limitations
-
-- Doesn't work with punctuation or uppercase letters.
-- The word list is extracted only once, so if the speed is set too fast or if the timer is set for too long, it might stop typing before the time is up.
-

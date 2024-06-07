@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from subprocess import Popen, PIPE
+from subprocess import Popen, PIPE, DEVNULL
 import random
 import time
 
 def keypress(sequence):
-    p = Popen(['xte'], stdin=PIPE, text=True)
+    p = Popen(['xte'], stdin=PIPE, stderr=DEVNULL, text=True)
     p.communicate(input=sequence)
 
 fin = False
@@ -24,7 +24,7 @@ def create_app(test_config=None):
 
         time.sleep(2)
         count = 0
-        speed = 100
+        speed = 150
         minTime, timeRange = 60000//(speed * 4.4) - 30, 60
         for word in words:
             for letter in word:
